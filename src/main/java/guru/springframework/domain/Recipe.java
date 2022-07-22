@@ -1,4 +1,4 @@
-package spring.recipeapp.domain;
+package guru.springframework.domain;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -15,13 +15,14 @@ public class Recipe {
     private Integer servings;
     private String source;
     private String url;
+    @Lob
     private String directions;
 
     @ManyToMany
     @JoinTable(name="recipe_category",
             joinColumns = @JoinColumn(name = "recipe_id"),
             inverseJoinColumns = @JoinColumn(name="category_id"))
-    private Set<Category> categories;
+    private Set<Category> categories = new HashSet<>();
     @Lob
     private Byte[] image;
 
@@ -137,5 +138,9 @@ public class Recipe {
 
     public void setCategories(Set<Category> categories) {
         this.categories = categories;
+    }
+
+    public void addIngredient(Ingredient ingredient){
+        this.getIngredients().add(ingredient);
     }
 }

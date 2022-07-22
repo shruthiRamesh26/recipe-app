@@ -1,4 +1,4 @@
-package spring.recipeapp.domain;
+package guru.springframework.domain;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -8,7 +8,7 @@ public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String desciption;
+    private String description;
 
     @ManyToMany(mappedBy = "categories")
     private Set<Recipe> recipes;
@@ -21,12 +21,12 @@ public class Category {
         this.id = id;
     }
 
-    public String getDesciption() {
-        return desciption;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDesciption(String desciption) {
-        this.desciption = desciption;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Set<Recipe> getRecipes() {

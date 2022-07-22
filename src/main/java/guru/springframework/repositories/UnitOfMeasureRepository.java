@@ -1,8 +1,8 @@
-package spring.recipeapp.repositories;
+package guru.springframework.repositories;
 
+import guru.springframework.domain.UnitOfMeasure;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
-import spring.recipeapp.domain.UnitOfMeasure;
 
 import java.util.Optional;
 

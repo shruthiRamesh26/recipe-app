@@ -1,8 +1,8 @@
-package spring.recipeapp.repositories;
+package guru.springframework.repositories;
 
+import guru.springframework.domain.Category;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
-import spring.recipeapp.domain.Category;
 
 import java.util.Optional;
 

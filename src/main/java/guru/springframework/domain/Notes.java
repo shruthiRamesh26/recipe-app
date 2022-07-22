@@ -1,4 +1,4 @@
-package spring.recipeapp.domain;
+package guru.springframework.domain;
 
 import javax.persistence.*;
 
